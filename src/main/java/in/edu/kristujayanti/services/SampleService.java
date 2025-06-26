@@ -247,8 +247,8 @@ public class SampleService {
                     int quant = doc.getInteger("quantity");
                     pri = pri * quant;
                     sum = sum + pri;
-                    Bson filter3 = Filters.eq("date", txt3);
-                    jarr.add(orders.find().filter(filter3));
+
+                    jarr.add(new JsonObject(doc.toJson()));
                 }
 
             }
